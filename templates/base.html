@@ -1,0 +1,28 @@
+{% load static from static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <title>George Draughn</title>
+</head>
+    </header>
+         <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <ul class="navbar-nav me-auto mb-lg-0 mx-auto">
+                <li><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/georgedraughn/">Home</a></li>
+                <li><a class="nav-link" href="http://127.0.0.1:8000/georgedraughn/portfolio">Portfolio</a></li>
+                <li><a class="nav-link" href="http://127.0.0.1:8000/georgedraughn/contact">Contact</a></li>
+              </ul>
+            </div>
+         </nav>
+    </header>
+</html>
+
+<body>
+    {% block body %}
+
+    {% endblock %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>

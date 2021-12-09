@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static from static %}
+
+{% block body %}
+<body>
+    {% for work in work %}
+    <link rel="stylesheet" href="{% static 'portfoliobkg.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolioimages.css' %}">
+        <div class="container mt-5 pt-5">
+          <div class="row gx-5">
+            <div class="col-sm-6">
+                <p class="display-3">{{ work.title }}</p>
+                <h1 class="lead"> {{work.description}} </h1>
+                <h4><small>{{work.date}}</small></h4>
+            </div>
+            <div class="col">
+              <img src="{{ work.thumbnail.url }}"/>
+            </div>
+          </div>
+        </div>
+    <br><br><br><br><br><br>
+    {% endfor %}
+</body>
+{% endblock %}

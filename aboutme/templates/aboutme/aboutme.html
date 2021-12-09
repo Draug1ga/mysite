@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static from static %}
+
+
+{% block body %}
+
+<body class="bg-light">
+<link rel="stylesheet" href="{% static 'contactbkg.css' %}">
+<main>
+    <div class="container ms-5 mt-5 pt-5 ps-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="display-1"><b>Let's Connect.</b></h1>
+          <h1 class="lead"><b>Contact me via the form below or email me at <a href="mailto:Draug2ga@gmial.com subject=Hello">Draug2ga@gmail.com</a></b></h1>
+            <div class="containger-fluid" >
+                <form class="site-form" action="{%url 'aboutme:aboutme'%}" method="post">
+                    {% csrf_token %}
+                    <br>
+                    {{ message.first_name }}
+                    <br>
+                    {{ message.last_name }}
+                    <br>
+                    {{ message.email_address }}
+                    <br>
+                    {{ message.message }}
+                    <br>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+</main>
+</body>
+
+{% endblock %}
+
+     <!--<img src="{% static 'image.jpg' %}">
+               <form class="site-form" action="{%url 'aboutme:aboutme'%}" method="post">
+
+                  {% csrf_token %}
+                <div class="form-group">
+                  <label class="form-label"></label>
+                  <input type="text" class="form-control" name="first_name" placeholder="First Name" >
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label"></label>
+                  <input type="text" class="form-control" name="last_name" placeholder="Last Name">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label"></label>
+                  <input type="email" class="form-control" name="email_address" placeholder="Emaill Address" >
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label"></label>
+                    <div class="input-group">
+                </div>-->
